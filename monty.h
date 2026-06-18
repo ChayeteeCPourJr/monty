@@ -39,6 +39,7 @@ extern stack_t *head;
 
 /* Opcode handler functions */
 void push(stack_t **stack, unsigned int line_number);
+int is_valid_integer(char *arg);
 void pall(stack_t **stack, unsigned int line_number);
 void pint(stack_t **stack, unsigned int line_number);
 void pop(stack_t **stack, unsigned int line_number);
@@ -47,7 +48,6 @@ void add(stack_t **stack, unsigned int line_number);
 void nop(stack_t **stack, unsigned int line_number);
 void div_op(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
-void sub(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
 
 /* Helper / utility functions */

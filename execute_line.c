@@ -21,6 +21,7 @@ void execute_line(char *opcode, char *line, unsigned int line_number)
 		{"nop", nop},
 		{"div", div_op},
 		{"mul", mul},
+		{"sub", sub},
 		{NULL, NULL}
 	};
 	int i;

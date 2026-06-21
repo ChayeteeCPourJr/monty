@@ -49,7 +49,14 @@ void nop(stack_t **stack, unsigned int line_number);
 void div_op(stack_t **stack, unsigned int line_number);
 void mul(stack_t **stack, unsigned int line_number);
 void sub(stack_t **stack, unsigned int line_number);
-
+void pchar(stack_t **stack, unsigned int line_number);
+void pstr(stack_t **stack, unsigned int line_number);
+void rotl(stack_t **stack, unsigned int line_number);
+void rotr(stack_t **stack, unsigned int line_number);
+extern int queue_mode;
+void insert_node(stack_t **stack, stack_t *new_node);
+void stack_mode(stack_t **stack, unsigned int line_number);
+void queue_mode_op(stack_t **stack, unsigned int line_number);
 /* Helper / utility functions */
 void free_stack(stack_t *stack);
 char *get_opcode(char *line);

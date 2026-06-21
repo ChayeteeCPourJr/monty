@@ -30,6 +30,41 @@ int is_valid_integer(char *arg)
 }
 
 /**
+ * insert_node - inserts a new node into the stack/queue depending
+ * on the current mode
+ * @stack: pointer to the top (head) of the stack
+ * @new_node: the node to insert
+ *
+ * Description: in stack mode (or on an empty list), inserts at the
+ * front. In queue mode, inserts at the back.
+ */
+void insert_node(stack_t **stack, stack_t *new_node)
+{
+	stack_t *last;
+
+	if (queue_mode == 0 || *stack == NULL)
+	{
+		new_node->prev = NULL;
+		new_node->next = *stack;
+
+		if (*stack != NULL)
+			(*stack)->prev = new_node;
+
+		*stack = new_node;
+	}
+	else
+	{
+		last = *stack;
+		while (last->next != NULL)
+			last = last->next;
+
+		new_node->next = NULL;
+		new_node->prev = last;
+		last->next = new_node;
+	}
+}
+
+/**
  * push - pushes an element onto the stack
  * @stack: pointer to the top (head) of the stack
  * @line_number: the line number in the Monty bytecode file
@@ -61,11 +96,5 @@ void push(stack_t **stack, unsigned int line_number)
 	}
 
 	new_node->n = atoi(arg);
-	new_node->prev = NULL;
-	new_node->next = *stack;
-
-	if (*stack != NULL)
-		(*stack)->prev = new_node;
-
-	*stack = new_node;
+	insert_node(stack, new_node);
 }

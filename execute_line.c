@@ -1,6 +1,7 @@
 #include "monty.h"
 
 stack_t *head = NULL;
+int queue_mode = 0;
 
 /**
  * execute_line - looks up the opcode in the instruction table and
@@ -22,6 +23,12 @@ void execute_line(char *opcode, char *line, unsigned int line_number)
 		{"div", div_op},
 		{"mul", mul},
 		{"sub", sub},
+		{"pchar", pchar},
+		{"pstr", pstr},
+		{"rotl", rotl},
+		{"rotr", rotr},
+		{"stack", stack_mode},
+		{"queue", queue_mode_op},
 		{NULL, NULL}
 	};
 	int i;

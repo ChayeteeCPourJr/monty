@@ -57,6 +57,7 @@ extern int queue_mode;
 void insert_node(stack_t **stack, stack_t *new_node);
 void stack_mode(stack_t **stack, unsigned int line_number);
 void queue_mode_op(stack_t **stack, unsigned int line_number);
+void mod_op(stack_t **stack, unsigned int line_number);
 /* Helper / utility functions */
 void free_stack(stack_t *stack);
 char *get_opcode(char *line);

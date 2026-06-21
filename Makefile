@@ -1,6 +1,6 @@
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -pedantic -std=gnu89
-SRC = main.c push.c pall.c pint.c pop.c swap.c add.c nop.c div.c mul.c sub.c pchar.c pstr.c rotl.c rotr.c stack_queue.c mod.c get_opcode.c free_stack.c execute_line.c
+SRC = main.c push.c pall.c pint.c pop.c swap.c add.c nop.c div.c mul.c sub.c pchar.c pstr.c rotl.c rotr.c stack_queue.c mod.c get_opcode.c free_stack.c execute_line.c mod.c
 OBJ = $(SRC:.c=.o)
 NAME = monty
 

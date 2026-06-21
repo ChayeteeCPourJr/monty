@@ -29,6 +29,8 @@ void execute_line(char *opcode, char *line, unsigned int line_number)
 		{"rotr", rotr},
 		{"stack", stack_mode},
 		{"queue", queue_mode_op},
+		{"mod", mod_op},
+		{"mod", mod_op},
 		{NULL, NULL}
 	};
 	int i;
